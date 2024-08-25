@@ -1,3 +1,8 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -5,7 +10,7 @@ body, html {
 }
 
 header {
-    background-color: #333;
+    background: #121e41;
     color: #fff;
     padding: 10px 0;
     position: sticky;
@@ -22,7 +27,8 @@ header {
 }
 
 .logo h1 {
-    margin: 0;
+    margin: 10px;
+    color: #0e72dd;
 }
 
 header nav ul {
@@ -44,7 +50,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    background-color: #575757;
+    background-color: #0a0303;
     border-radius: 5px;
 }
 
@@ -55,7 +61,7 @@ header nav ul li a:hover {
 #hero {
     position: relative;
     background: url('/imgs/hm1.jpg') no-repeat center center/cover;
-    height: 500px;
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -64,14 +70,14 @@ header nav ul li a:hover {
 }
 
 #hero .hero-content {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 5px;
 }
 
-#hero h2 {
-    font-size: 3em;
-    margin: 0;
+.hero-content h2 {
+    font-family: 'Newsreader', serif;
+    color: #979fa7;
 }
 
 #hero p {
@@ -79,8 +85,7 @@ header nav ul li a:hover {
     margin: 10px 0 0;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 765px) {
     .header-container {
         flex-direction: column;
         align-items: flex-start;
@@ -88,13 +93,11 @@ header nav ul li a:hover {
 
     header nav ul {
         flex-direction: column;
-        width: 100%;
-        display: none;
+        /* display: none; */
     }
 
     header nav ul li {
         margin: 10px 0;
-        text-align: left;
     }
 
     header nav ul li a {
@@ -142,17 +145,32 @@ header nav ul li a:hover {
     }
 }
 
+.content-box {
+    border: #0a0303 solid 1px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content, h2, p {
+    text-align: center;
+}
+
 #contact {
+    position: inherit;
     background-color: #f9f9f9;
     padding: 50px 0;
     text-align: center;
 }
 
 .contact-card {
-    border: 2px solid #ddd; /* Add solid border */
+    border: 2px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add shadow effect */
-    overflow: hidden; /* Ensure shadow doesn't get clipped */
+    box-shadow: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
     max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;
@@ -165,12 +183,6 @@ header nav ul li a:hover {
 .contact-form {
     padding: 20px;
     flex: 1; /* Distribute space evenly */
-}
-
-.contact-info h3,
-.contact-form h3 {
-    margin-bottom: 15px;
-    color: #333;
 }
 
 .contact-info p {
@@ -204,15 +216,23 @@ header nav ul li a:hover {
     background-color: #0056b3;
 }
 
+
 section {
     padding: 20px;
 }
 
 footer {
-    background-color: #333;
+    background: #121e41;
     color: #fff;
-    text-align: center;
-    padding: 20px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    padding: 20px 0;
+}
+
+.logo-name {
+    color: #0e72dd;
 }
 
 .social-icons {
@@ -222,16 +242,6 @@ footer {
 .social-icons img {
     width: 30px;
     margin-right: 10px;
-}
-
-footer {
-    background: #10182f;
-    color: #fff;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 9999;
-    padding: 20px 0;
 }
 
 footer .content {
